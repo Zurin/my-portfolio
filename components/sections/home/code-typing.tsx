@@ -55,7 +55,7 @@ export default function CodeTyping() {
           setCursorPosition(0);
         }
       },
-      Math.random() * 50 + 30,
+      Math.random() * 20 + 10,
     );
 
     return () => clearTimeout(timeout);
