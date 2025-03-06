@@ -31,7 +31,7 @@ export default function ProjectsSection() {
             <span>{"//"}</span>
             Recent Projects
           </h1>
-          <LaptopAnimation className="w-[300px] -scale-x-100 scale-y-100 mx-auto md:mx-0" />
+          <LaptopAnimation className="w-[400px] scale-y-100 mx-auto md:mx-0" />
           <p className="w-[400px] text-muted-foreground">
             Designing, Building & Integrating Apps That Actually Work
           </p>
