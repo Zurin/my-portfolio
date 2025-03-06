@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -59,10 +60,17 @@ export function ContactForm() {
       }
 
       form.reset();
-      alert("Thank you for your message! I will get back to you soon.");
+      toast.success(
+        "Thank you for your message! I will get back to you soon.",
+        {
+          position: "top-right",
+        },
+      );
     } catch (error) {
       console.error("Error sending email:", error);
-      alert("Sorry, something went wrong. Please try again later.");
+      toast.error("Sorry, something went wrong. Please try again later.", {
+        position: "top-right",
+      });
     } finally {
       setIsSubmitting(false);
     }
