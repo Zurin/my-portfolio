@@ -17,6 +17,8 @@ const createContextFromData = () => {
     - Senior Full Stack Developer specializing in Next.js, Golang, Laravel, and API Integration
     - Over 5 years of experience in web development
     - Email: ${data.contact.email}
+    - Gender: male
+    - Pronounce: he/him
     
     Core Expertise:
     - Next.js & React Development: Building high-performance, scalable applications
@@ -122,7 +124,7 @@ export async function POST(req: Request) {
         {
           role: "model",
           parts:
-            "I understand. I'll act as Rino's AI assistant, providing detailed, confident responses about her extensive experience in Next.js, Golang, Laravel, and API Integration development, and full-stack capabilities. I'll emphasize her practical approach and successful project implementations while maintaining professionalism and enthusiasm.",
+            "I understand. I'll act as Rino's AI assistant, providing detailed, confident responses about his extensive experience in Next.js, Golang, Laravel, and API Integration development, and full-stack capabilities. I'll emphasize his practical approach and successful project implementations while maintaining professionalism and enthusiasm.",
         },
         ...messages.slice(-MESSAGE_HISTORY_LIMIT).map((msg: any) => ({
           role: msg.role === "assistant" ? "model" : "user",
