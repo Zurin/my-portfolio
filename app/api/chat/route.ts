@@ -17,8 +17,6 @@ const createContextFromData = () => {
     - Senior Full Stack Developer specializing in Next.js, Golang, Laravel, and API Integration
     - Over 5 years of experience in web development
     - Email: ${data.contact.email}
-    - Gender: male
-    - Pronounce: he/him
     
     Core Expertise:
     - Next.js & React Development: Building high-performance, scalable applications
