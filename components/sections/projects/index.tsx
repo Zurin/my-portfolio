@@ -15,7 +15,7 @@ export default function ProjectsSection() {
     <div
       ref={ref}
       id="projects"
-      className="w-full p-12 flex justify-between flex-col items-center lg:flex-row lg:items-stretch gap-12 container my-32 text-sm md:text-base"
+      className="w-full p-10 flex justify-between text-center flex-col items-center xl:flex-row xl:items-stretch gap-12 container my-32 text-sm md:text-base"
     >
       <div>
         <div className="sticky top-8 text-center md:text-left">

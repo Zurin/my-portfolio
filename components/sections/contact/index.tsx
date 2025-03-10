@@ -31,29 +31,31 @@ export default function ContactSection() {
         <span className="text-gradient-primary">{" }"}</span>
       </h1>
       <div className="flex items-center gap-6 flex-col lg:flex-row justify-around w-full h-full">
-        <div className="flex flex-col items-center gap-2 text-center w-[450px]">
+        <div className="flex flex-col items-center gap-2 text-center w-[450px] p-10 sm:p-0">
           <ChatAssistant />
         </div>
 
-        <motion.div
-          layout
-          className="w-[450px] h-[500px] rounded-2xl bg-muted border overflow-hidden"
-        >
-          <div className="flex justify-between flex-shrink-0 px-4 pt-2">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Globe size={18} />
-              <span>{data.contact.email}</span>
+        <div className="flex flex-col items-center gap-2 w-[450px] h-[500px] p-10 sm:p-0">
+          <motion.div
+            layout
+            className="h-[500px] w-full rounded-2xl bg-muted border"
+          >
+            <div className="flex justify-between flex-shrink-0 px-4 pt-2">
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Globe size={18} />
+                <span>{data.contact.email}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="block rounded-full size-3 bg-green-500 ml-auto" />
+                <span className="block rounded-full size-3 bg-yellow-500" />
+                <span className="block rounded-full size-3 bg-red-500 " />
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="block rounded-full size-3 bg-green-500 ml-auto" />
-              <span className="block rounded-full size-3 bg-yellow-500" />
-              <span className="block rounded-full size-3 bg-red-500 " />
+            <div className="p-6">
+              <ContactForm />
             </div>
-          </div>
-          <div className="p-6">
-            <ContactForm />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

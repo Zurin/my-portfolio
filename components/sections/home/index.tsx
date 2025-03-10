@@ -17,7 +17,7 @@ export default function HomeSection() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-full flex flex-col xl:flex-row gap-12 p-6 items-center justify-center overflow-hidden container text-center md:text-left"
+      className="relative min-h-full flex flex-col xl:flex-row gap-12 p-6 items-center justify-center overflow-hidden container text-center"
     >
       {/* grid image behind */}
       <Image

@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: props) {
           <span className="block rounded-full size-3 bg-red-500 " />
         </div>
       </div>
-      <div className="group relative h-[300px] overflow-hidden cursor-pointer rounded-lg m-2 border">
+      <div className="group relative h-[200px] overflow-hidden cursor-pointer rounded-lg m-2 border">
         <Image
           className="size-full object-cover object-top"
           src={project.image}
