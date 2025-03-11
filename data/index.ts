@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram } from "lucide-react";
 
 const data = {
   home: {
@@ -18,6 +18,16 @@ const data = {
         name: "linkedin",
         link: "https://www.linkedin.com/in/rino-ridlo-julianto/",
         icon: Linkedin,
+      },
+      {
+        name: "facebook",
+        link: "https://facebook.com/RynoVengeance/",
+        icon: Facebook,
+      },
+      {
+        name: "instagram",
+        link: "https://www.instagram.com/trnshd_1/",
+        icon: Instagram,
       },
     ],
   },
@@ -188,6 +198,56 @@ const data = {
   contact: {
     email: "rinoridlojulianto@gmail.com",
   },
+  experiences: [
+    {
+      id: 1,
+      company: "Linkbot Pte Ltd",
+      period: "Aug 2024 - Present",
+      position: "Sr. Software Engineer",
+      img: "/companies/linkbot.webp",
+      website: "https://linkbot.sg/",
+    },
+    {
+      id: 2,
+      company: "PT AINO Indonesia",
+      period: "Nov 2023 - Jul 2024",
+      position: "Full-stack Developer",
+      img: "/companies/aino.webp",
+      website: "https://www.ainosi.co.id/",
+    },
+    {
+      id: 3,
+      company: "amalan international",
+      period: "Jul 2023 - Oct 2023",
+      position: "Back End Engineer",
+      img: "/companies/amalan.jpg",
+      website: "https://amalan.com/",
+    },
+    {
+      id: 4,
+      company: "ICUBE By Sirclo",
+      period: "Jul 2022 - Jun 2023",
+      position: "Software Engineer",
+      img: "/companies/icube.png",
+      website: "https://icubeonline.com/",
+    },
+    {
+      id: 5,
+      company: "Authscure Sdn Bhd",
+      period: "Jan 2021 - Jun 2022",
+      position: "Back End Developer",
+      img: "/companies/authscure.webp",
+      website: "https://www.authscure.com.my/",
+    },
+    {
+      id: 6,
+      company: "PT AINO Indonesia",
+      period: "Mar 2019 - Feb 2021",
+      position: "Full-stack Engineer",
+      img: "/companies/aino.webp",
+      website: "https://www.ainosi.co.id/",
+    },
+  ],
 };
 
 export default data;

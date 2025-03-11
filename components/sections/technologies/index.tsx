@@ -12,7 +12,7 @@ export default function Technologies() {
   return (
     <div
       ref={ref}
-      className="flex gap-4 items-center flex-col justify-center bg-muted w-full py-12 my-12 overflow-hidden"
+      className="flex gap-4 items-center flex-col justify-center bg-muted w-full py-12 mt-12 overflow-hidden"
     >
       <h2 className="text-2xl font-bold">
         <span className="text-gradient-secondary">My Technologies</span>

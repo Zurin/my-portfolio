@@ -1,7 +1,13 @@
 "use client";
 import useHash from "@/hooks/use-hash";
 import { cn } from "@/lib/utils";
-import { GalleryVerticalEnd, Home, LucideSend, User } from "lucide-react";
+import {
+  GalleryVerticalEnd,
+  Home,
+  LucideSend,
+  User,
+  BriefcaseBusiness,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 const navItems = [
@@ -25,6 +31,12 @@ const navItems = [
   },
   {
     id: "navItem4",
+    name: "Experiences.tsx",
+    path: "#experiences",
+    icon: BriefcaseBusiness,
+  },
+  {
+    id: "navItem5",
     name: "Contact-Me.tsx",
     path: "#contact",
     icon: LucideSend,
@@ -56,13 +68,15 @@ export default function Header() {
               href={item.path}
               scroll
               className={cn(
-                "relative h-full w-fit md:min-w-40 border-x flex items-center justify-start gap-2 text-muted-foreground hover:bg-background px-4",
+                "relative h-full w-fit lg:min-w-40 border-x flex items-center justify-start gap-2 text-muted-foreground hover:bg-background px-4",
                 isActive && "text-foreground bg-background hover:bg-background",
                 item.isRight && "ml-auto",
               )}
             >
               <item.icon size={14} className="text-primary-foreground" />
-              <span className="hidden md:inline">{item.name}</span>{" "}
+              <span className="hidden md:inline text-xs lg:text-base">
+                {item.name}
+              </span>{" "}
               {isActive && <BorderActive />}
             </Link>
           );
