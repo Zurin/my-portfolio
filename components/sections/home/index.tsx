@@ -76,7 +76,7 @@ export default function HomeSection() {
         initial="initial"
         animate="end"
         transition={{ duration: 1 }}
-        className="relative w-full max-w-2xl"
+        className="relative flex w-full max-w-2xl items-center justify-center"
       >
         <CodeTyping />
       </motion.div>

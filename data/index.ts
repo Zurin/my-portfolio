@@ -42,7 +42,7 @@ const data = {
         id: 3,
         title: "Agathis Merchant Page",
         description:
-          "An online tourism ticketing platform that serves as an aggregator for AINO tourism merchants, accommodating a diverse range of destinations and facilitating seamless ticket sales for travelers. \n\n Technologies Used: Vue.js, Tailwind CSS, Golang.",
+          "An online tourism ticketing platform that aggregates AINO tourism merchants, offering various destinations and enabling seamless ticket sales for travelers. \n\n Technologies Used: Vue.js, Tailwind CSS, Golang.",
         image: "/projects-imgs/agathis-merchant.png",
         previewLink: "https://agathis.fun",
       },
