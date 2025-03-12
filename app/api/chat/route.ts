@@ -12,6 +12,13 @@ const createContextFromData = () => {
 
   const skills = data.technologies.skills.map((s) => s.name).join(", ");
 
+  const experiences = data.experiences
+    .map(
+      (ex) =>
+        `- Company: ${ex.company}; position: ${ex.position}; period: ${ex.period}`,
+    )
+    .join("\n");
+
   return `
     About Rino Ridlo:
     - Senior Full Stack Developer specializing in Next.js, Golang, Laravel, and API Integration
@@ -26,6 +33,9 @@ const createContextFromData = () => {
     
     Past projects:
     ${projects}
+    
+    Job experiences:
+    ${experiences}
   `;
 };
 

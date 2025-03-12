@@ -72,7 +72,7 @@ export default function Experiences() {
                               </a>
                             </p>
                           </div>
-                          <div className="whitespace-nowrap ml-12 md:ml-24 text-right text-sm text-gray-500">
+                          <div className="whitespace-nowrap ml-5 sm:ml-12 md:ml-24 text-right text-sm text-gray-500">
                             <p>{experience.period}</p>
                           </div>
                         </div>

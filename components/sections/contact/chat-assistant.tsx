@@ -40,8 +40,13 @@ const QUICK_OPTIONS: QuickOption[] = [
       "I'm interested in working with Rino. What's the best way to start?",
   },
   {
-    text: "💼 Past Projects",
+    text: "🏆 Past Projects",
     message: "Could you share some examples of Rino's past projects?",
+  },
+  {
+    text: "💼 Job Experience Overview",
+    message:
+      "Could you please provide details regarding Rino's current and past job experiences?",
   },
 ];
 
