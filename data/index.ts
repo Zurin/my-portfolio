@@ -50,18 +50,18 @@ const data = {
       },
       {
         id: 3,
+        title: "Agathis Partner Apps",
+        description:
+          "Web applications accessible through Mandiri Livin Sukha, JakLingko, and Dana, with WebView integration for the first two and a dedicated Dana Mini Program. \n\n Technologies Used: Nuxt.js, Tailwind CSS, Golang, Dana Mini Program.",
+        image: "/projects-imgs/agathis-partner.png",
+      },
+      {
+        id: 4,
         title: "Agathis Merchant Page",
         description:
           "An online tourism ticketing platform that aggregates AINO tourism merchants, offering various destinations and enabling seamless ticket sales for travelers. \n\n Technologies Used: Vue.js, Tailwind CSS, Golang.",
         image: "/projects-imgs/agathis-merchant.png",
         previewLink: "https://agathis.fun",
-      },
-      {
-        id: 4,
-        title: "Agathis Partner Apps",
-        description:
-          "Web applications accessible through Mandiri Livin Sukha, JakLingko, and Dana, with WebView integration for the first two and a dedicated Dana Mini Program. \n\n Technologies Used: Nuxt.js, Tailwind CSS, Golang, Dana Mini Program.",
-        image: "/projects-imgs/agathis-partner.png",
       },
     ],
   },
