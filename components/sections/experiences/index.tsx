@@ -10,7 +10,7 @@ export default function Experiences() {
   useCurSection(ref, 0.1);
   return (
     <div ref={ref} id="experiences">
-      <h1 className="text-center text-2xl md:text-4xl mt-20 mb-12">
+      <h1 className="text-center text-2xl md:text-4xl mt-20 -mb-16 xl:mb-12">
         <span className="text-gradient-primary">{"{ "}</span>
         Experiences
         <span className="text-gradient-primary">{" }"}</span>
@@ -20,7 +20,7 @@ export default function Experiences() {
           <div className="sticky top-8 text-center md:text-left">
             {/* grid image behind */}
             <Image
-              className="absolute -top-2 -left-5 -z-10 text-transparent opacity-30 w-full h-1/2 object-cover"
+              className="absolute top-24 -left-5 -z-10 text-transparent opacity-30 w-full h-1/2 object-cover"
               src="/svgs/grid.svg"
               alt="grid image"
               width={0}

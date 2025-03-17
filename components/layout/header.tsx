@@ -1,13 +1,7 @@
 "use client";
 import useHash from "@/hooks/use-hash";
 import { cn } from "@/lib/utils";
-import {
-  GalleryVerticalEnd,
-  Home,
-  LucideSend,
-  User,
-  BriefcaseBusiness,
-} from "lucide-react";
+import { FolderCode, Home, LucideSend, User, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 const navItems = [
@@ -27,13 +21,13 @@ const navItems = [
     id: "navItem3",
     name: "Projects.tsx",
     path: "#projects",
-    icon: GalleryVerticalEnd,
+    icon: FolderCode,
   },
   {
     id: "navItem4",
     name: "Experiences.tsx",
     path: "#experiences",
-    icon: BriefcaseBusiness,
+    icon: BadgeCheck,
   },
   {
     id: "navItem5",

@@ -11,7 +11,7 @@ import Image from "next/image";
 export default function ContactSection() {
   const [gameTurnsLeft, setGameTurnsLeft] = useState(1);
   const ref = useRef(null);
-  useCurSection(ref, 0.1);
+  useCurSection(ref, 0.3);
   return (
     <div
       ref={ref}
