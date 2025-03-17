@@ -29,6 +29,9 @@ const RATE_LIMIT_KEY = "chatRateLimit";
 const MAX_MESSAGES_PER_HOUR = 20;
 const MESSAGE_HISTORY_LIMIT = 5;
 
+const initContent: string =
+  "Hi! I'm Rino's AI assistant. I can help you learn more about his skills, experience, or how he can help with your project. What would you like to know?";
+
 const QUICK_OPTIONS: QuickOption[] = [
   {
     text: "👩‍💻 Skills & Experience",
@@ -68,8 +71,7 @@ export default function ChatAssistant() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
-      content:
-        "Hi! I'm Rino's AI assistant. I can help you learn more about his skills, experience, or how she can help with your project. What would you like to know?",
+      content: initContent,
       timestamp: new Date(),
     },
   ]);
@@ -204,8 +206,7 @@ export default function ChatAssistant() {
       setMessages([
         {
           role: "assistant",
-          content:
-            "Hi! I'm Rino's AI assistant. I can help you learn more about his skills, experience, or how she can help with your project. What would you like to know?",
+          content: initContent,
           timestamp: new Date(),
         },
       ]);
