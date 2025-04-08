@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
@@ -78,6 +79,7 @@ export default function RootLayout({
         {children}
         <Toaster richColors closeButton />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
