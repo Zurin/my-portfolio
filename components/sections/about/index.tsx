@@ -1,7 +1,7 @@
 "use client";
 import useCurSection from "@/hooks/use-cur-section";
 import Image from "next/image";
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import rinoridlo from "@/public/imgs/rinoridlo_mini.jpg";
 
@@ -89,7 +89,7 @@ export default function AboutSection() {
             unnecessary delays and avoiding endless back-and-forth
             communication.
             <br />
-            🔹 Proactive Problem Prevention – I don’t just fix issues, I
+            🔹 Proactive Problem Prevention – I don&apos;t just fix issues, I
             implement strategies to prevent them. Whether optimizing an
             application or enhancing its architecture, I focus on long-term
             stability and performance.
@@ -98,7 +98,7 @@ export default function AboutSection() {
             settings, ensuring effective collaboration to achieve project goals.
             <br />
             <br />
-            <span className="font-semibold">📌 Let's Connect</span>
+            <span className="font-semibold">📌 Let&apos;s Connect</span>
             <br />
             If your application requires fixing, optimization, scaling, or
             development, I would love to discuss how we can work together.

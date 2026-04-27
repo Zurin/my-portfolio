@@ -1,19 +1,23 @@
 "use client";
-import { useParams, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function useHash() {
-  const [hash, setHash] = useState<undefined | string>();
-  const router = useRouter();
-  const params = useParams();
+  const [hash, setHash] = useState("");
+  const pathname = usePathname();
 
   useEffect(() => {
-    setHash(window.location.hash);
-  }, [params]);
+    const syncHash = () => {
+      setHash(window.location.hash);
+    };
 
-  const updateHash = (newHash: string) => {
-    router.push(`#${newHash}`, { scroll: false });
-  };
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
 
-  return { hash, updateHash };
+    return () => {
+      window.removeEventListener("hashchange", syncHash);
+    };
+  }, [pathname]);
+
+  return { hash };
 }

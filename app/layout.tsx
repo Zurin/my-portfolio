@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const firaCode = Fira_Code({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rinoridlo.my.id"),
   title: {
     default: "Rino Ridlo | Software Engineer",
     template: "%s | Rino Ridlo",
