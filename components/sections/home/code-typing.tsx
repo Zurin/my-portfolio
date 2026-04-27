@@ -27,18 +27,19 @@ function createAmazingWebsite() {
   };
 };`;
 
+const codeLines = codeSnippet.split("\n");
+
 export default function CodeTyping() {
   const [displayedLines, setDisplayedLines] = useState<string[]>(
-    Array(codeSnippet.split("\n").length).fill(""),
+    Array(codeLines.length).fill(""),
   );
   const [currentLine, setCurrentLine] = useState(0);
   const [cursorPosition, setCursorPosition] = useState(0);
-  const lines = codeSnippet.split("\n");
 
   useEffect(() => {
-    if (currentLine >= lines.length) return;
+    if (currentLine >= codeLines.length) return;
 
-    const currentText = lines[currentLine];
+    const currentText = codeLines[currentLine];
     const timeout = setTimeout(
       () => {
         if (cursorPosition < currentText.length) {

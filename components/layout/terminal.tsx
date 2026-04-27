@@ -99,13 +99,16 @@ export default function Terminal() {
       </ul>
       {/* console */}
       <ul ref={ref} className="w-full px-6 pt-8 pb-4 cursor-text h-full overflow-y-scroll" onClick={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}>
-        {terminalLines.map((line) => {
+        {terminalLines.map((line, lineIndex) => {
           const lineArr = line.split("✓");
           return (
-            <li key={Math.random()}>
-              {lineArr.map((value) =>
+            <li key={`${lineIndex}-${line}`}>
+              {lineArr.map((value, valueIndex) =>
                 !value ? (
-                  <span className="text-green-500 font-extrabold" key={Math.random()}>
+                  <span
+                    className="text-green-500 font-extrabold"
+                    key={`${lineIndex}-${valueIndex}-check`}
+                  >
                     ✓
                   </span>
                 ) : (
