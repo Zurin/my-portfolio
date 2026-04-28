@@ -19,7 +19,7 @@ export default function ContactSection() {
       className="w-full flex flex-col items-center container py-32"
     >
       <Image
-        src="/imgs/logo.png"
+        src="/imgs/logo_blue.png"
         alt="Contact"
         width={150}
         height={150}

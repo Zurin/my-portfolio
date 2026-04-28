@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { FolderCode, Home, LucideSend, User, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 const navItems = [
   {
     id: "navItem1",
@@ -40,12 +41,13 @@ const navItems = [
 
 export default function Header() {
   const { hash } = useHash();
+  const [pendingHash, setPendingHash] = useState("");
 
   return (
     <div className="w-full h-12 border-b bg-muted flex items-center">
       <div className="w-14 flex items-center justify-center flex-shrink-0 font-bold">
         <Image
-          src="/imgs/logo.png" // Update this path to match your logo's location in the public folder
+          src="/imgs/logo_blue.png" // Update this path to match your logo's location in the public folder
           alt="RR Logo"
           width={24}
           height={24}
@@ -54,13 +56,17 @@ export default function Header() {
       </div>
       <div className="flex items-center size-full">
         {navItems.map((item) => {
+          const activeHash =
+            pendingHash && pendingHash !== hash ? pendingHash : hash;
           const isActive =
-            item.path === hash || (item.path === "#home" && hash === "");
+            item.path === activeHash ||
+            (item.path === "#home" && activeHash === "");
           return (
             <Link
               key={item.id}
               href={item.path}
               scroll
+              onClick={() => setPendingHash(item.path)}
               className={cn(
                 "relative h-full w-fit lg:min-w-40 border-x flex items-center justify-start gap-2 text-muted-foreground hover:bg-background px-4",
                 isActive && "text-foreground bg-background hover:bg-background",

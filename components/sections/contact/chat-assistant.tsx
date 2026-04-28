@@ -145,8 +145,18 @@ export default function ChatAssistant() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
-    if (isTyping) return;
+    await submitMessage(input);
+  };
+
+  const handleQuickOptionClick = (option: QuickOption) => {
+    if (isTyping || remainingMessages <= 0) return;
+    setInput("");
+    void submitMessage(option.message);
+  };
+
+  const submitMessage = async (messageContent: string) => {
+    const trimmedMessage = messageContent.trim();
+    if (!trimmedMessage || isTyping) return;
 
     if (remainingMessages <= 0) {
       setMessages((prev) => [
@@ -176,7 +186,7 @@ export default function ChatAssistant() {
 
     const userMessage: Message = {
       role: "user",
-      content: input.trim(),
+      content: trimmedMessage,
       timestamp: new Date(),
     };
 
@@ -193,12 +203,6 @@ export default function ChatAssistant() {
     );
 
     debouncedApiCall(chatMessages);
-  };
-
-  const handleQuickOptionClick = (option: QuickOption) => {
-    if (isTyping || remainingMessages <= 0) return;
-    setInput(option.message);
-    handleSubmit(new Event("submit") as any);
   };
 
   const handleClearClick = () => {
@@ -278,7 +282,9 @@ export default function ChatAssistant() {
                     : "polygon(0% 0%, 100% 0%, 100% 50%, calc(100% + 10px) 50%, 100% 100%, 0% 100%)",
               }}
               className={`rounded-2xl p-3 max-w-[80%] text-left ${
-                msg.role === "assistant" ? "bg-secondary/15" : "bg-primary/50"
+                msg.role === "assistant"
+                  ? "bg-accent/20 border border-accent/35 text-foreground"
+                  : "bg-primary/18 border border-primary/35 text-foreground"
               }`}
             >
               <ReactMarkdown
@@ -330,7 +336,7 @@ export default function ChatAssistant() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => handleQuickOptionClick(option)}
-                      className="text-left px-3 py-2 rounded-md bg-background/50 hover:bg-background/80 transition-colors text-sm"
+                      className="text-left px-3 py-2 rounded-md border border-border/70 bg-background/60 hover:bg-background/90 transition-colors text-sm"
                       disabled={isTyping || remainingMessages <= 0}
                     >
                       {option.text}
@@ -342,16 +348,16 @@ export default function ChatAssistant() {
           </motion.div>
         ))}
         {isTyping && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex gap-2"
-          >
-            <Bot size={24} />
-            <div className="bg-muted rounded-lg p-3">
-              <span className="animate-pulse">...</span>
-            </div>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="flex gap-2"
+        >
+          <Bot size={24} />
+          <div className="bg-accent/20 border border-accent/35 rounded-lg p-3">
+            <span className="animate-pulse">...</span>
+          </div>
+        </motion.div>
         )}
         <div ref={messagesEndRef} />
       </div>
