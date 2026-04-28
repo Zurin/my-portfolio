@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { FolderCode, Home, LucideSend, User, BadgeCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 const navItems = [
   {
     id: "navItem1",
@@ -41,7 +40,6 @@ const navItems = [
 
 export default function Header() {
   const { hash } = useHash();
-  const [pendingHash, setPendingHash] = useState("");
 
   return (
     <div className="w-full h-12 border-b bg-muted flex items-center">
@@ -56,17 +54,13 @@ export default function Header() {
       </div>
       <div className="flex items-center size-full">
         {navItems.map((item) => {
-          const activeHash =
-            pendingHash && pendingHash !== hash ? pendingHash : hash;
           const isActive =
-            item.path === activeHash ||
-            (item.path === "#home" && activeHash === "");
+            item.path === hash || (item.path === "#home" && hash === "");
           return (
             <Link
               key={item.id}
               href={item.path}
               scroll
-              onClick={() => setPendingHash(item.path)}
               className={cn(
                 "relative h-full w-fit lg:min-w-40 border-x flex items-center justify-start gap-2 text-muted-foreground hover:bg-background px-4",
                 isActive && "text-foreground bg-background hover:bg-background",
