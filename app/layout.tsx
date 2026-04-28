@@ -64,8 +64,8 @@ export const metadata: Metadata = {
     canonical: "https://rinoridlo.my.id",
   },
   icons: {
-    icon: "/imgs/logo.png",
-    apple: "/imgs/logo.png",
+    icon: "/imgs/logo_blue.png",
+    apple: "/imgs/logo_blue.png",
   },
 };
 
